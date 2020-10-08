@@ -4,7 +4,7 @@
 # Date: 2019/11/29
 
 fail=0
-passes=0
+execellent=0
 defer=0
 print("\n~~~~~~~~~~~~~~~Welcome to student version~~~~~~~~~~~~~~~\n")
 def start():
@@ -19,10 +19,10 @@ def start():
             print("\n~~~~~~~~~~Invalid selection~~~~~~~~~~\n")
             continue
 def inputs():
-    global fail,passes,defer
+    global fail,execellent,defer
     try:
-        passes=int(input("Enter your passed credits:"))
-        checker(passes) #checker functaion has a parameter and it assign to vallue.
+        execellent=int(input("Enter your passed credits:"))
+        checker(execellent) #checker functaion has a parameter and it assign to vallue.
         fail=int(input("Enter your failed credits:"))
         checker(fail)
         defer=int(input("Enter your defer credits:"))
@@ -36,15 +36,15 @@ def checker(value):#check the conditions,if pass or fail or defer not in a range
         print("\n~~~~~~~~~~~~~~~Range error~~~~~~~~~~~~~~~\n")
         inputs()
 def logic():
-    global fail,passes,defer
-    if passes+fail+defer==120:
-        if passes<=40 and fail>=80:
+    global fail,execellent,defer
+    if execellent+fail+defer==120:
+        if execellent<=40 and fail>=80:
                     print("\n.....Your progression outcome is Excluded.....\n")
-        elif passes==120:
+        elif execellent==120:
                     print("\n.....Your progression outcome is progress.....\n")
-        elif passes==100:
+        elif execellent==100:
                     print("\n.....Your progression outcome is Do not progress Module trailer.....\n")
-        elif passes<=80 and fail<=60:
+        elif execellent<=80 and fail<=60:
                     print("\n.....Your progression outcome is Do not progress Module retriever.....\n")
     else:
         print("\n~~~~~~~~Total incorrect~~~~~~~~\n")
